@@ -9,19 +9,24 @@ To write a program to implement the the Logistic Regression Model to Predict the
 
 ## Algorithm
 1.Import the required libraries.
+
 2.Load the dataset and check for null data values and duplicate data values in the dataframe.
+
 3.Import label encoder from sklearn.preprocessing to encode the dataset.
+
 4.Apply Logistic Regression on to the model.
+
 5.Predict the y values.
+
 6.Calculate the Accuracy,Confusion and Classsification report.
 
 ## Program:
 ```
-
-Program to implement the the Logistic Regression Model to Predict the Placement Status of Student
-Developed by:LOGESHWARI.P
-RegisterNumber:212221230055
-
+Program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
+Developed by:Logeshwari.P
+RegisterNumber:  212221230055
+```
+```
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -56,30 +61,53 @@ from sklearn.linear_model import LogisticRegression
 clf=LogisticRegression()
 clf.fit(x_train,y_train)
 clf.score(x_test,y_test)
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression(solver = "liblinear") 
+lr.fit(x_train,y_train)
+y_pred = lr.predict(x_test)
+y_pred
+
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test,y_pred)
+accuracy
+
+from sklearn.metrics import confusion_matrix
+confusion = (y_test,y_pred)
+confusion 
+
+from sklearn.metrics import classification_report
+classification_report1 = classification_report(y_test,y_pred)
+print(classification_report1)
 # Predicting for random value
 clf.predict([[1	,78.33,	1,	2,	77.48,	2,	86.5,	0,	66.28]])
+
 ```
 
 ## Output:
-## Dataset:
-![271840286-46679c99-ac41-48eb-a089-37d536847389](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/85d452bc-dd81-41dd-a9d7-b5f4a6aee5ab)
-## Dropping the unwanted columns:
-![271841722-a39e88df-4cc6-4cff-b8ac-28b9006bf78d](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/2669245f-7f75-4128-ac71-b3efed0b8b8d)
-## df.info():
-![271840345-4641415b-00ec-4056-a04e-86686f0e7d41](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/4305d213-48f2-4ed8-8834-3b638150d915)
-## df.info() after changing object into category:
-![271840450-a663d998-c3bf-4d3a-950c-a06212808717](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/db4c5447-793b-477d-a21e-8c87ac0af76e)
-## df.info() after changing into integer
-![271840828-b044bd5a-7060-4817-b6ab-95df52f5fc47](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/99cedef3-7391-451c-b989-f5a23f7c967d)
-## selecting features and lables
-![271841166-4b7e1797-872e-4bad-be09-bb6456dee85a](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/a8be846d-e863-457b-b7e1-05f1993f9891)
-## Training and testing
-![271841325-298da98f-f1f6-4135-acfe-72a1dc1f148e](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/6eef2a65-745b-4560-ae2e-b92ae9426ee4)
-## Creating a Classifier using Sklearn:
-![271841494-563ba84b-c13b-4cc2-9b3b-04bdfa9834ef](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/58a5c74e-5e0c-45f3-ba06-56ace692dbe2)
-## Predicting for random value:
-![271841560-648f82a5-0837-4069-8ead-70c0aaac1d6b](https://github.com/logeshwari2004/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/94211349/9f7992d5-cca1-4f1c-8f02-5d7a538d79d8)
+## Dataset
 
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/f6c9fa6e-648f-4aea-ab60-3aa0ff50d253)
+
+## Dropping the unwanted columns
+
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/6c6da4eb-e493-4104-96ce-6e28603dd1f1)
+## df.info()
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/78da1d09-3c34-4c6d-963d-d65295d8419c)
+## df.info() after changing object into category
+
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/23c98a0b-0c5c-4bfa-98b2-1ccb7a8873ea)
+## df.info() after changing into integer
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/64b926aa-afc8-4c2a-9bd9-01121fa6e7e0)
+## Selecting features and labels
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/55cb8d41-64e8-436b-9eaf-4b96f6c7a7cd)
+## Training and testing
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/252f0699-6313-4607-89c5-82187f157b38)
+## Creating a Classifier using Sklearn
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/89177e27-b560-45b1-ad9b-7dbf9e9f1d26)
+## Confusion matrix and Classification report
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/30f9ea15-384e-4fa5-90d0-94a45995f0f3)
+## Predicting for random value
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/cd0600e0-52da-4ba8-a768-63f6394e7175)
 
 ## Result:
 Thus the program to implement the the Logistic Regression Model to Predict the Placement Status of Student is written and verified using python programming.
